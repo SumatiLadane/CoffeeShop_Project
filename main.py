@@ -2,7 +2,7 @@ import menu
 import pyfiglet
 
 # Display a welcome message using pyfiglet
-print(pyfiglet.figlet_format("Welcome to 7 Clubs\n"))
+print(pyfiglet.figlet_format("Welcome to Sunset Cafe\n"))
 
 while True:
     # Display menu options
