@@ -23,24 +23,31 @@ class Coffee():
 
         price = 0
         
-        print("1.flavor Espresso\n2.flavor Cold brew\n3.flavor Hot Coffee\nflavor Latte\n")
+        while True:
+            print("1.flavor Espresso\n2.flavor Cold brew\n3.flavor Hot Coffee\n4flavor Latte\n")
 
-        flavor = "Hot Coffee"
+            flavor = "Hot Coffee"
 
-        choice = input("Enter your choice: ")
+            choice = input("Enter your choice: ")
 
-        if choice == 1:
-            flavor = "Espresso"
-            price+=50
-        elif choice == 2:
-            flavor = "Cold brew"
-            price+=40
-        elif choice == 3:
-            flavor = "Hot coffee"
-            price+=25
-        else:
-            flavor = "Latte"  
-            price+=55   
+            if choice == "1":
+                flavor = "Espresso"
+                price+=50
+                break
+            elif choice == "2":
+                flavor = "Cold brew"
+                price+=40
+                break
+            elif choice == "3":
+                flavor = "Hot coffee"
+                price+=25
+                break
+            elif choice == "4":
+                flavor = "Latte"  
+                price+=55 
+                break  
+            else:
+                print("Invalid Choice")    
         
         return Coffee(flavor,price)
 
@@ -68,81 +75,110 @@ class Pizza():
     @staticmethod
     def handle():
         price = 0
-        print("1.size 16\n2.size 14\n3.size 12\nsize 10\n")
-        
-        choice = input("Enter your choice: ")
+        while True:
+            print("1.size 16\n2.size 14\n3.size 12\n4size 10\n")
+            
+            choice = input("Enter your choice: ")
 
-        size = 16
-
-        if choice == 1:
             size = 16
-            price+=120
-        elif choice == 2:
-            size = 14
-            price+=100
-        elif choice == 3:
-            size = 12
-            price+=80
-        else:
-            size = 10  
-            price+=50   
+            
+            if choice == "1":
+                size = 16
+                price+=120
+                break
+            elif choice == "2":
+                size = 14
+                price+=100
+                break
+            elif choice == "3":
+                size = 12
+                price+=80
+                break
+            elif choice == "4":
+                size = 10  
+                price+=50 
+                break
+            else:
+                print("Invalid Choice")      
+        while True:
 
-        print("1.topping Pepperponi\n2.topping Mushrooms\n3.Onions\ntopping Bacon\n")   
+            print("1.topping Pepperponi\n2.topping Mushrooms\n3.Onions\ntopping Bacon\n")   
+            
+            choice = input("Enter your choice: ")      
+
+            topping = "Bacon"      
+
+            if choice == "1":
+                topping = "Pepperponi"
+                price+=120
+                break
+            elif choice == "2":
+                topping = "Mushrooms"
+                price+=140
+                break
+            elif choice == "3":
+                topping = "Onions"
+                price+=100
+                break
+            elif choice == "4":
+                topping = "Bacon"  
+                price+=150 
+                break
+            else:
+                print("Invalid Choice")    
+        while True:
+
+            print("1.crust Thin\n2.crust Stuffed\n3.crust Thik\ncrust Regular\n") 
         
-        choice = input("Enter your choice: ")      
+            choice = input("Enter ypur choice: ")     
 
-        topping = "Bacon"      
+            CrustType = "Thin"
 
-        if choice == 1:
-            topping = "Pepperponi"
-            price+=120
-        elif choice == 2:
-            topping = "Mushrooms"
-            price+=140
-        elif choice == 3:
-            topping = "Onions"
-            price+=100
-        else:
-            topping = "Bacon"  
-            price+=150 
-
-        print("1.crust Thin\n2.crust Stuffed\n3.crust Thik\ncrust Regular\n") 
-       
-        choice = input("Enter ypur choice: ")     
-
-        CrustType = "Thin"
-
-        if choice == 1:
-            crust = "Thin"
-            price+=100
-        elif choice == 2:
-            crust = "stuffed"
-            price+=120
-        elif choice == 3:
-            crust = "Thik"
-            price+=150
-        else:
-            crust = "Regular" 
-            price+=80  
-
-        print("1.suace Tomato\n2.sauce Pesto\n3.sauce Alfredo\nsauce Barbecue\n")
+            if choice == "1":
+                crust = "Thin"
+                price+=100
+                break
+            elif choice == "2":
+                crust = "stuffed"
+                price+=120
+                break
+            elif choice == "3":
+                crust = "Thik"
+                price+=150
+                break
+            elif choice == "4":
+                crust = "Regular" 
+                price+=80 
+                break 
+            else:
+                print("Invalid Choice")    
         
-        choice = input("Enter your choice: ")
+        while True:
 
-        sauce = "Tomato"
+            print("1.suace Tomato\n2.sauce Pesto\n3.sauce Alfredo\nsauce Barbecue\n")
+            
+            choice = input("Enter your choice: ")
 
-        if choice == 1:
             sauce = "Tomato"
-            price+=100
-        elif choice == 2:
-            sauce = "Pesto"
-            price+=150
-        elif choice == 3:
-            sauce = "Alfredo"
-            price+=120
-        else:
-            sauce = "Barbecue"
-            price+=160   
+
+            if choice == "1":
+                sauce = "Tomato"
+                price+=100
+                break
+            elif choice == "2":
+                sauce = "Pesto"
+                price+=150
+                break
+            elif choice == "3":
+                sauce = "Alfredo"
+                price+=120
+                break
+            elif choice == "4":
+                sauce = "Barbecue"
+                price+=160 
+                break  
+            else:
+                print("Invalid Choice")    
 
         return Pizza(size,topping,crust,sauce,price)                                         
 
@@ -174,62 +210,86 @@ class Burger():
 
         price = 0
         
-        print("1.size 6\n2.size 4\n3.size 8\nsize 3\n")
+        while True:
 
-        size = 6
+            print("1.size 6\n2.size 4\n3.size 8\nsize 3\n")
 
-        choice = input("Enter your choice: ")
-
-        if choice == 1:
             size = 6
-            price+=60
-        elif choice == 2:
-            size = 4
-            price+=50
-        elif choice == 3:
-            size = 8
-            price+=80
-        else:
-            size = 3
-            price+=30
 
-        print("1.pattytype Mushroom\n2.pattytype Veggi\n3.pattytype Chicken\npattytype Lamb \n") 
+            choice = input("Enter your choice: ")
 
-        pattytype = "Veggi"
+            if choice == "1":
+                size = 6
+                price+=60
+                break
+            elif choice == "2":
+                size = 4
+                price+=50
+                break
+            elif choice == "3":
+                size = 8
+                price+=80
+                break
+            elif choice == "4":
+                size = 3
+                price+=30
+                break
+            else:
+                print("Invalid Choice")    
 
-        choice = input("Enter your choice: ")
+        while True:
 
-        if choice == 1:
-            pattytype = "Mushroom"
-            price+=20
-        elif choice == 2:
+            print("1.pattytype Mushroom\n2.pattytype Veggi\n3.pattytype Chicken\npattytype Lamb \n") 
+
             pattytype = "Veggi"
-            price+=60
-        elif choice == 3:
-            pattytype = "Chicken"
-            price+=50
-        else:
-            pattytype = "Quinoa" 
-            price+=35
 
-        print("1.toppings Tomato\n2.toppings Pickles\n3.toppings Bacon\ntoppings Lettuce\n")
+            choice = input("Enter your choice: ")
 
-        toppings = "Tomato"
+            if choice == "1":
+                pattytype = "Mushroom"
+                price+=20
+                break
+            elif choice == "2":
+                pattytype = "Veggi"
+                price+=60
+                break
+            elif choice == "3":
+                pattytype = "Chicken"
+                price+=50
+                break
+            elif choice == "4":
+                pattytype = "Quinoa" 
+                price+=35
+                break
+            else:
+                print("Invalid Choice")    
 
-        choice = input("Enter your choice: ")
+        while True:
 
-        if choice == 1:
-            toppings = "Tomato" 
-            price+=30
-        elif choice == 2:
-            toppings = "Pickles"
-            price+=25
-        elif choice == 3:
-            toppings = "Bacon"
-            price+=50
-        else:
-            toppings = "Lettuce"
-            price+=45
+            print("1.toppings Tomato\n2.toppings Pickles\n3.toppings Bacon\ntoppings Lettuce\n")
+
+            toppings = "Tomato"
+
+            choice = input("Enter your choice: ")
+
+            if choice == "1":
+                toppings = "Tomato" 
+                price+=30
+                break
+            elif choice == "2":
+                toppings = "Pickles"
+                price+=25
+                break
+            elif choice == "3":
+                toppings = "Bacon"
+                price+=50
+                break
+            elif choice == "4":
+                toppings = "Lettuce"
+                price+=45
+                break
+            else:
+                print("Invalid Choice")    
 
         return Burger(size,pattytype,toppings,price)
 
@@ -258,44 +318,60 @@ class Sandwich():
     @staticmethod
     def handle():  
         price = 0  
+        
+        while True:
 
-        print("1.breadtype White bread\n2breadtype Whole Wheat\n3.breadtype Tortilla\nbreadtype Rye bread\n")
+            print("1.breadtype White bread\n2breadtype Whole Wheat\n3.breadtype Tortilla\nbreadtype Rye bread\n")
 
-        breadtype = "Whole Wheat"
-
-        choice = input("Enter your choice: ")
-
-        if choice == 1:
-            breadtype = "White bread"
-            price+=20
-        elif choice == 2:
             breadtype = "Whole Wheat"
-            price+=25
-        elif choice == 3:
-            breadtype =  "Tortilla"
-            price+=15
-        else:
-            breadtype =  "Rye bread"
-            price+=10
 
-        print("1.filling Turkey\n2.filling Capress\n3.filling BLT\nfilling Tuna salad\n")
+            choice = input("Enter your choice: ")
 
-        filling = "Turkey"
+            if choice == "1":
+                breadtype = "White bread"
+                price+=20
+                break
+            elif choice == "2":
+                breadtype = "Whole Wheat"
+                price+=25
+                break
+            elif choice == "3":
+                breadtype =  "Tortilla"
+                price+=15
+                break
+            elif choice == "4":
+                breadtype =  "Rye bread"
+                price+=10
+                break
+            else:
+                print("Invalid Choice")    
 
-        choice = input("Enter your choice: ")
+        while True:
 
-        if choice == 1:
+            print("1.filling Turkey\n2.filling Capress\n3.filling BLT\nfilling Tuna salad\n")
+
             filling = "Turkey"
-            price+=30
-        elif choice == 2:
-            filling = "Capress"
-            price+=35
-        elif choice == 3:
-            filling = "BLT"
-            price+=40
-        else:
-            filling = "Tuna salad"
-            price+=20
+
+            choice = input("Enter your choice: ")
+
+            if choice == "1":
+                filling = "Turkey"
+                price+=30
+                break
+            elif choice == "2":
+                filling = "Capress"
+                price+=35
+                break
+            elif choice == "3":
+                filling = "BLT"
+                price+=40
+                break
+            elif choice == "4":
+                filling = "Tuna salad"
+                price+=20
+                break
+            else:
+                print("Invalid Choice")    
 
         return Sandwich(breadtype,filling,price)
 
@@ -326,63 +402,87 @@ class Maggi():
     def handle():
 
         price = 0
+        
+        while True:
 
-        print("1.flavor Masala\n2.flavor Vegetable\n3.flavor Chicken\nflavor Cheese\n")
+            print("1.flavor Masala\n2.flavor Vegetable\n3.flavor Chicken\nflavor Cheese\n")
 
-        flavor = "Masala"
-
-        choice = input("Enter your choice: ")
-
-        if choice == 1:
             flavor = "Masala"
-            price+=10
-        elif choice == 2:
-            flavor = "Vegetable" 
-            price+=20  
-        elif choice == 3:
-            flavor = "Chicken"
-            price+=30
-        else:
-            flavor = "Cheese"
-            price+=25
 
-        print("1.quantity 1\n2.quantity 2\n3.quantity 3\n 4\n")
+            choice = input("Enter your choice: ")
 
-        quantity = "1"
+            if choice == "1":
+                flavor = "Masala"
+                price+=10
+                break
+            elif choice == "2":
+                flavor = "Vegetable" 
+                price+=20 
+                break 
+            elif choice == "3":
+                flavor = "Chicken"
+                price+=30
+                break
+            elif choice == "4":
+                flavor = "Cheese"
+                price+=25
+                break
+            else:
+                print("Invalid Choice")    
+        
+        while True:
 
-        choice = input("Enter your choice: ")
+            print("1.quantity 1\n2.quantity 2\n3.quantity 3\n 4\n")
 
-        if choice == 1:
-            quantity = 1
-            price+=20
-        elif choice == 2:
-            quantity = 2
-            price+=10
-        elif choice == 3:
-            quantity = 3
-            price+=27
-        else:
-            quantity = 4   
-            price+=35
+            quantity = "1"
 
-        print("1.topping Egg\n2.topping Vegetables\n3.topping Herbs and grrens\ntopping Sauce\n")
+            choice = input("Enter your choice: ")
 
-        topping = "Egg"
+            if choice == "1":
+                quantity = 1
+                price+=20
+                break
+            elif choice == "2":
+                quantity = 2
+                price+=10
+                break
+            elif choice == "3":
+                quantity = 3
+                price+=27
+                break
+            elif choice == "4":
+                quantity = 4   
+                price+=35
+                break
+            else:
+                print("Invalid Choice")    
 
-        choice = input("Enter your choice: ")
+        while True:
 
-        if choice == 1:
+            print("1.topping Egg\n2.topping Vegetables\n3.topping Herbs and grrens\ntopping Sauce\n")
+
             topping = "Egg"
-            price+=10
-        elif choice == 2:
-            topping = "Vegetables"
-            price+=20
-        elif choice == 3:
-            topping = "Herbs and greens"
-            price+=30
-        else:
-            topping = "Sauce"
-            price+=25
+
+            choice = input("Enter your choice: ")
+
+            if choice == "1":
+                topping = "Egg"
+                price+=10
+                break
+            elif choice == "2":
+                topping = "Vegetables"
+                price+=20
+                break
+            elif choice == "3":
+                topping = "Herbs and greens"
+                price+=30
+                break
+            elif choice == "4":
+                topping = "Sauce"
+                price+=25
+                break
+            else:
+                print("Invalid Choice")    
 
         return Maggi(flavor,quantity,topping,price)
 
