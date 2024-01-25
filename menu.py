@@ -40,7 +40,9 @@ def billing():
     # Convert the total price to voice using audionumbers module
     path = "audio/totalA.wav"
     playsound(path)
-    audionumbers.numberToVoice(tprice)   
+    audionumbers.numberToVoice(tprice)  
+   
+     
 
  # Function to display the main menu and handle user choices   
 def menu():
@@ -68,6 +70,7 @@ def menu():
             random()
         elif choice == "7":
             billing()
+            cart = []
             break
         else:
             print("Invalid Choice")
